@@ -230,11 +230,11 @@ button {
 }
 
 .hero__title {
-    font-weight: 400;
-    font-size: 120px;
-    line-height: 0.95;
-    letter-spacing: -3.24px;
-    color: #F2F2F2;
+    font-weight: 600;
+    font-size: 104px;
+    line-height: 0.85;
+    letter-spacing: -2px;
+    color: #FFF;
 }
 
 .hero__text-group {
@@ -247,18 +247,19 @@ button {
 }
 
 .hero__subtitle {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 32px;
-    line-height: 1.09;
-    color: #F2F2F2;
+    line-height: 1;
+    color: #FFF;
     max-width: 716px;
 }
 
 .hero__description {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 1.2;
-    color: #F2F2F2;
+    font-size: 20px; 
+    line-height: 1.09;
+    letter-spacing: -0.05em;
+    color: #FFF;
     max-width: 500px;
 }
 
@@ -584,6 +585,57 @@ text-transform: uppercase;
 
 
 
+
+/* ============================================
+   PG CONTATTI - INTRO
+   ============================================ */
+.pg-contatti-intro {
+    background-color: #FFF550;
+    padding: 120px 0;
+}
+
+.pg-contatti-intro__row {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 138px;
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.pg-contatti-intro__number {
+    flex-shrink: 0;
+}
+
+.pg-contatti-intro__number span {
+    font-weight: 600;
+    font-size: 200px;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    color: #1a1a2e;
+}
+
+.pg-contatti-intro__text {
+    max-width: 500px;
+    padding-top: 40px;
+}
+
+.pg-contatti-intro__title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #1a1a2e;
+    margin-bottom: 24px;
+}
+
+.pg-contatti-intro__desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #000;
+}
 
 /* ============================================
    FOOTER
