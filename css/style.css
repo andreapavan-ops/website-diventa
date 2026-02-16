@@ -546,6 +546,13 @@ text-transform: uppercase;
     letter-spacing: -4%;
 }
 
+.pg-contatti-hero h2 {
+    font-weight: 500;
+    font-size: 64px;
+    letter-spacing: -4%;
+    margin-bottom: 25px;
+}
+
 
 .contatti__btn {
     display: inline-flex;
@@ -596,22 +603,28 @@ text-transform: uppercase;
 
 .pg-contatti-intro__row {
     max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 138px;
+    margin: 0 25px;
+    padding: 64px 138px;
     display: flex;
     align-items: flex-start;
-    gap: 80px;
+    gap: 350px;
+    border-top: 1px solid #000;
+}
+
+.pg-contatti-intro__row:last-child {
+    border-bottom: 1px solid #000;
 }
 
 .pg-contatti-intro__number {
     flex-shrink: 0;
+    width: 250px;
 }
 
 .pg-contatti-intro__number span {
-    font-weight: 600;
-    font-size: 200px;
-    line-height: 0.85;
-    letter-spacing: -0.04em;
+    font-weight: 200;
+    font-size: 300px;
+    line-height: 1.09;
+    letter-spacing: -0.05em;
     color: #1a1a2e;
 }
 
@@ -621,10 +634,10 @@ text-transform: uppercase;
 }
 
 .pg-contatti-intro__title {
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: 0;
     color: #1a1a2e;
     margin-bottom: 24px;
 }
@@ -632,10 +645,67 @@ text-transform: uppercase;
 .pg-contatti-intro__desc {
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.35;
     letter-spacing: -0.02em;
     color: #000;
 }
+
+
+
+
+
+
+.pg-contatti-hero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #222333;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff550;
+    min-height: 540px;
+    padding: 60px 20px;
+}
+
+
+.pg-contatti__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 217px;
+    max-height: 45px;
+    padding: 13px 24px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: #000;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.contatti__btn:hover {
+    background-color: #000;
+    color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ============================================
    FOOTER
