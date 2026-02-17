@@ -1,36 +1,9 @@
+/* ----- SET DEFOULT ----- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-:root {
-    --color-primary:       #FFF550;
-    --color-primary-hover: #f0e640;
-    --color-dark:          #1a1a2e;
-    --color-black:         #000;
-    --color-white:         #FFF;
-    --color-bg-footer:     #222333;
-    --color-bg-warm:       #F5F0E8;
-    --color-overlay:       rgba(0, 0, 0, 0.40);
-    --color-border-light:  rgba(0, 0, 0, 0.15);
-    --color-white-70:      rgba(255, 255, 255, 0.7);
-    --color-white-50:      rgba(255, 255, 255, 0.5);
-}
-
-
-html {
-    scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-    font-family: 'Geist', sans-serif;
-    font-weight: 400;
-    color: var(--color-black);
-    background-color: var(--color-white);
-    overflow-x: hidden;
 }
 
 img {
@@ -55,7 +28,54 @@ button {
     font-family: inherit;
 }
 
-/* ----- UTILITIES ----- */
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+h1,
+h2,
+h3, 
+h4, 
+h5, 
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+} 
+
+
+/* ----- SET GLOBAL ----- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    overflow-x: hidden;
+}
+
+:root {
+    --color-primary:       #FFF550;
+    --color-primary-hover: #f0e640;
+    --color-dark:          #1a1a2e;
+    --color-black:         #000;
+    --color-white:         #FFF;
+    --color-bg-footer:     #222333;
+    --color-bg-warm:       #F5F0E8;
+    --color-overlay:       rgba(0, 0, 0, 0.40);
+    --color-border-light:  rgba(0, 0, 0, 0.15);
+    --color-white-70:      rgba(255, 255, 255, 0.7);
+    --color-white-50:      rgba(255, 255, 255, 0.5);
+}
+
+
+
+/* ----- SET UTILITIES ----- */
 .content {
     width: 100%;
     max-width: 1440px;
@@ -69,7 +89,6 @@ button {
     align-items: center;
     justify-content: center;
     width: fit-content;
-    font-family: 'Geist', sans-serif;
     font-weight: 600;
     font-size: 16px;
     letter-spacing: -0.02em;
@@ -103,22 +122,14 @@ button {
     color: var(--color-white);
 }
 
-.btn--outline {
-    background-color: var(--color-white);
-    color: var(--color-black);
-    border: 1px solid var(--color-border-light);
-}
-
-.btn--outline:hover {
-    background-color: #f5f5f5;
-}
 
 /* ----- HEADER ----- */
 .header {
     position: fixed;
     top: 28px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     z-index: 9999;
     width: 100%;
     max-width: 1440px;
@@ -158,8 +169,6 @@ button {
 .header__link:hover,
 .header__link.active {
     text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 1.5px;
 }
 
 .header__burger {
@@ -192,10 +201,10 @@ button {
 }
 
 .header.scrolled .header__nav {
-    background-color: rgba(255, 245, 80, 0.95);
+    background-color: rgba(255, 245, 80, 0.70);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* ----- HERO ----- */
@@ -272,19 +281,16 @@ button {
     max-width: 500px;
 }
 
-/* ----- STATEMENT / EDITORIALE SECTION ----- */
+/* ----- EDITORIALE SECTION ----- */
 
-.statement {
+.editoriale {
     width: 100%;
     padding: 80px 0;
 }
 
-.editoriale {
-    max-width: 1192px;
-    margin: 0 auto;
+.editoriale .content {
     display: flex;
     flex-direction: column;
-    padding: 0 24px;
 }
 
 .editoriale__overline {
@@ -747,10 +753,6 @@ text-transform: uppercase;
     }
 
     /* Editoriale */
-    .editoriale {
-        padding: 0 48px;
-    }
-
     .editoriale__title {
         font-size: 56px;
     }
@@ -878,12 +880,8 @@ text-transform: uppercase;
 
     /* ----- Editoriale ----- */
 
-    .statement {
-        padding: 60px 0;
-    }
-
     .editoriale {
-        padding: 0 24px;
+        padding: 60px 0;
     }
 
     .editoriale__title {
