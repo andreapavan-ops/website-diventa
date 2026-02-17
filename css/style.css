@@ -1,11 +1,23 @@
-/* ============================================
-   RESET & BASE
-   ============================================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --color-primary:       #FFF550;
+    --color-primary-hover: #f0e640;
+    --color-dark:          #1a1a2e;
+    --color-black:         #000;
+    --color-white:         #FFF;
+    --color-bg-footer:     #222333;
+    --color-bg-warm:       #F5F0E8;
+    --color-overlay:       rgba(0, 0, 0, 0.40);
+    --color-border-light:  rgba(0, 0, 0, 0.15);
+    --color-white-70:      rgba(255, 255, 255, 0.7);
+    --color-white-50:      rgba(255, 255, 255, 0.5);
+}
+
 
 html {
     scroll-behavior: smooth;
@@ -16,8 +28,8 @@ html {
 body {
     font-family: 'Geist', sans-serif;
     font-weight: 400;
-    color: #000;
-    background-color: #FFF;
+    color: var(--color-black);
+    background-color: var(--color-white);
     overflow-x: hidden;
 }
 
@@ -43,9 +55,7 @@ button {
     font-family: inherit;
 }
 
-/* ============================================
-   UTILITIES
-   ============================================ */
+/* ----- UTILITIES ----- */
 .content {
     width: 100%;
     max-width: 1440px;
@@ -53,56 +63,57 @@ button {
     padding: 0 138px;
 }
 
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.col-6 {
-    width: 50%;
-}
-
-/* ============================================
-   BUTTONS
-   ============================================ */
+/* ----- BUTTONI ----- */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: fit-content;
     font-family: 'Geist', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 16px;
-    letter-spacing: -0.05px;
+    letter-spacing: -0.02em;
     line-height: 1.2;
-    padding: 18px 24px;
+    padding: 13px 24px;
+    border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
     white-space: nowrap;
+    text-decoration: none;
 }
 
 .btn--primary {
-    background-color: #FFF550;
-    color: #000;
+    background-color: var(--color-primary);
+    color: var(--color-black);
 }
 
 .btn--primary:hover {
-    background-color: #f0e640;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.btn--white {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.btn--white:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
 }
 
 .btn--outline {
-    background-color: #FFF;
-    color: #000;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: 1px solid var(--color-border-light);
 }
 
 .btn--outline:hover {
     background-color: #f5f5f5;
 }
 
-/* ============================================
-   HEADER
-   ============================================ */
+/* ----- HEADER ----- */
 .header {
     position: fixed;
     top: 28px;
@@ -118,7 +129,7 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FFF550;
+    background-color: var(--color-primary);
     border-radius: 100px;
     padding: 20px 48px;
     max-width: 100%;
@@ -140,7 +151,7 @@ button {
     font-size: 14px;
     letter-spacing: -0.39px;
     line-height: 0.95;
-    color: #000;
+    color: var(--color-black);
     transition: opacity 0.3s ease;
 }
 
@@ -164,7 +175,7 @@ button {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background-color: var(--color-black);
     transition: all 0.3s ease;
 }
 
@@ -187,9 +198,7 @@ button {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* ============================================
-   HERO
-   ============================================ */
+/* ----- HERO ----- */
 .hero {
     position: relative;
     width: 100%;
@@ -211,7 +220,7 @@ button {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.40);
+    background-color: var(--color-overlay);
     z-index: 1;
 }
 
@@ -234,7 +243,7 @@ button {
     font-size: 104px;
     line-height: 0.85;
     letter-spacing: -2px;
-    color: #FFF;
+    color: var(--color-white);
 }
 
 .hero__text-group {
@@ -250,22 +259,21 @@ button {
     font-weight: 400;
     font-size: 32px;
     line-height: 1;
-    color: #FFF;
+    color: var(--color-white);
     max-width: 716px;
 }
 
 .hero__description {
     font-weight: 400;
-    font-size: 20px; 
+    font-size: 20px;
     line-height: 1.09;
     letter-spacing: -0.05em;
-    color: #FFF;
+    color: var(--color-white);
     max-width: 500px;
 }
 
-/* ============================================
-   STATEMENT / EDITORIALE SECTION
-   ============================================ */
+/* ----- STATEMENT / EDITORIALE SECTION ----- */
+
 .statement {
     width: 100%;
     padding: 80px 0;
@@ -283,7 +291,7 @@ button {
     font-weight: 600;
     font-size: 14px;
     text-transform: uppercase;
-    color: #000;
+    color: var(--color-black);
     margin-bottom: 20px;
 }
 
@@ -292,7 +300,7 @@ button {
     font-size: 72px;
     line-height: 1;
     letter-spacing: -0.04em;
-    color: #1a1a2e;
+    color: var(--color-dark);
     margin-bottom: 40px;
 }
 
@@ -313,38 +321,11 @@ button {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: -0.02em;
-    color: #000;
+    color: var(--color-black);
 }
 
-.editoriale__btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 217px;
-    max-height: 45px;
-    padding: 13px 24px;
-    background-color: #FFF550;
-    border: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    color: #000;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-}
 
-.editoriale__btn:hover {
-    background-color: #000;
-    color: #FFF;
-}
-
-/* ============================================
-   MEDIA SECTION (APE)
-   ============================================ */
+/* ----- MEDIA SECTION (APE) ----- */
 .ape-section {
     width: 100%;
     overflow: hidden;
@@ -357,11 +338,9 @@ button {
     object-position: center;
 }
 
-/* ============================================
-   COMPETENZE SECTION
-   ============================================ */
+/* ----- COMPETENZE SECTION ----- */
 .servizi {
-    background-color: #FFF550;
+    background-color: var(--color-primary);
     padding: 80px 0;
 }
 
@@ -374,7 +353,7 @@ button {
 .servizi__header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 32px;
 }
 
@@ -383,7 +362,7 @@ button {
     font-size: 76px;
     line-height: 0.95;
     letter-spacing: -3.47px;
-    color: #000;
+    color: var(--color-black);
     max-width: 800px;
 }
 
@@ -392,11 +371,11 @@ button {
     font-size: 24px;
     line-height: 1.09;
     letter-spacing: -0.29px;
-    color: #000;
+    color: var(--color-black);
     max-width: 800px;
 }
 
-/* Cards container */
+/* ----- Cards container ----- */
 .servizi__cards {
     display: flex;
     gap: 16px;
@@ -407,7 +386,7 @@ button {
     display: flex;
 }
 
-/* Card base */
+/* ----- Card base ----- */
 .servizio_card_dark,
 .servizio_card_light {
     display: flex;
@@ -418,13 +397,13 @@ button {
 }
 
 .servizio_card_dark {
-    background-color: #1a1a2e;
-    color: #FFF;
+    background-color: var(--color-dark);
+    color: var(--color-white);
 }
 
 .servizio_card_light {
-    background-color: #FFF;
-    color: #000;
+    background-color: var(--color-white);
+    color: var(--color-black);
 }
 
 .servizio_card_dark h3,
@@ -454,11 +433,10 @@ button {
     display: block;
 }
 
-/* 
-   SEZIONE 3 - CLIENTI
-*/
+/* ----- SEZIONE 3 - CLIENTI ----- */
+
 .clienti {
-    background-color: #F5F0E8;
+    background-color: var(--color-bg-warm);
     padding: 80px 0;
 }
 
@@ -474,7 +452,7 @@ button {
     font-size: 24px;
     line-height: 1.09;
     letter-spacing: -0.29px;
-    color: #000;
+    color: var(--color-black);
     text-align: center;
 }
 
@@ -492,9 +470,7 @@ button {
 }
 
 
-/* ============================================
-  SEZIONE 4 CONTATTI
-   ============================================ */
+/* ----- SEZIONE 4 CONTATTI -----*/
 
 .contatti {
     position: relative;
@@ -517,7 +493,7 @@ button {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.40);
+    background-color: var(--color-overlay);
     z-index: 1;
 }
 
@@ -530,7 +506,7 @@ button {
     justify-content: center;
     height: 100%;
     text-align: center;
-    color: #FFF;
+    color: var(--color-white);
     gap: 20px;
 }
 
@@ -554,51 +530,11 @@ text-transform: uppercase;
 }
 
 
-.contatti__btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 217px;
-    max-height: 45px;
-    padding: 13px 24px;
-    background-color: #FFF550;
-    border: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    color: #000;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-}
 
-.contatti__btn:hover {
-    background-color: #000;
-    color: #FFF;
-}
+/* ----- PG CONTATTI - INTRO ----- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ============================================
-   PG CONTATTI - INTRO
-   ============================================ */
 .pg-contatti-intro {
-    background-color: #FFF550;
-    padding: 120px 0;
+    background-color: var(--color-primary);
 }
 
 .pg-contatti-intro__row {
@@ -608,11 +544,16 @@ text-transform: uppercase;
     display: flex;
     align-items: flex-start;
     gap: 350px;
-    border-top: 1px solid #000;
+    border-top: 1px solid var(--color-black);
+}
+
+.pg-contatti-intro__row--header {
+    display: block;
+    border-top: none;
 }
 
 .pg-contatti-intro__row:last-child {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--color-black);
 }
 
 .pg-contatti-intro__number {
@@ -625,7 +566,7 @@ text-transform: uppercase;
     font-size: 300px;
     line-height: 1.09;
     letter-spacing: -0.05em;
-    color: #1a1a2e;
+    color: var(--color-dark);
 }
 
 .pg-contatti-intro__text {
@@ -633,12 +574,20 @@ text-transform: uppercase;
     padding-top: 40px;
 }
 
+.pg-contatti-intro__heading {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--color-dark);
+}
+
 .pg-contatti-intro__title {
     font-weight: 400;
     font-size: 32px;
     line-height: 1;
     letter-spacing: 0;
-    color: #1a1a2e;
+    color: var(--color-dark);
     margin-bottom: 24px;
 }
 
@@ -647,11 +596,8 @@ text-transform: uppercase;
     font-size: 16px;
     line-height: 1.35;
     letter-spacing: -0.02em;
-    color: #000;
+    color: var(--color-black);
 }
-
-
-
 
 
 
@@ -659,60 +605,21 @@ text-transform: uppercase;
     display: flex;
     flex-direction: column;
     width: 100%;
-    color: #222333;
+    color: var(--color-bg-footer);
     font-weight: 500;
     align-items: center;
     justify-content: center;
-    background-color: #fff550;
+    background-color: var(--color-primary);
     min-height: 540px;
     padding: 60px 20px;
 }
 
 
-.pg-contatti__btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 217px;
-    max-height: 45px;
-    padding: 13px 24px;
-    background-color: #fff;
-    border: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    color: #000;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-}
+/* ----- FOOTER ----- */
 
-.contatti__btn:hover {
-    background-color: #000;
-    color: #FFF;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ============================================
-   FOOTER
-   ============================================ */
 .footer {
-    background-color: #222333;
-    color: #FFF;
+    background-color: var(--color-bg-footer);
+    color: var(--color-white);
     padding: 0;
 }
 
@@ -744,7 +651,7 @@ text-transform: uppercase;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.4;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--color-white-70);
 }
 
 .footer__nav {
@@ -757,7 +664,7 @@ text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
     line-height: 1.4;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--color-white-70);
     transition: opacity 0.3s ease;
 }
 
@@ -769,7 +676,7 @@ text-transform: uppercase;
     display: flex;
     gap: 54px;
     padding-top: 24px;
-    border-top: 1px solid #FFF;
+    border-top: 1px solid var(--color-white);
 }
 
 .footer__info {
@@ -784,7 +691,7 @@ text-transform: uppercase;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     line-height: 1.4;
-    color: #FFF;
+    color: var(--color-white);
     margin-bottom: 4px;
 }
 
@@ -792,17 +699,16 @@ text-transform: uppercase;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.4;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--color-white-50);
 }
 
 .footer__info p strong {
     font-weight: 600;
-    color: #FFF;
+    color: var(--color-white);
 }
 
-/* ============================================
-   RESPONSIVE - TABLET (800px - 1439px)
-   ============================================ */
+/* ----- RESPONSIVE - TABLET (800px - 1439px) ----- */
+
 @media only screen and (max-width: 1439px) {
     .content {
         padding: 0 48px;
@@ -872,6 +778,16 @@ text-transform: uppercase;
         gap: 12px;
     }
 
+    /* Pg Contatti Intro */
+    .pg-contatti-intro__row {
+        padding: 64px 48px;
+        gap: 80px;
+    }
+
+    .pg-contatti-intro__number span {
+        font-size: 180px;
+    }
+
     /* Footer */
     .footer__inner {
         padding-left: 48px;
@@ -879,9 +795,7 @@ text-transform: uppercase;
     }
 }
 
-/* ============================================
-   RESPONSIVE - MOBILE (< 800px)
-   ============================================ */
+/* ------ RESPONSIVE - MOBILE (< 800px) ------ */
 @media only screen and (max-width: 799px) {
     .content {
         padding: 0 24px;
@@ -904,7 +818,7 @@ text-transform: uppercase;
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #FFF550;
+        background-color: var(--color-primary);
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -933,7 +847,7 @@ text-transform: uppercase;
         height: 24px;
     }
 
-    /* Hero */
+    /* ----- Hero ----- */
     .hero {
         min-height: 100vh;
         height: 100vh;
@@ -962,7 +876,8 @@ text-transform: uppercase;
         flex-direction: column;
     }
 
-    /* Editoriale */
+    /* ----- Editoriale ----- */
+
     .statement {
         padding: 60px 0;
     }
@@ -988,12 +903,14 @@ text-transform: uppercase;
         flex-shrink: 1;
     }
 
-    /* Media section */
+    /* ----- Media section ----- */
+
     .ape-section__img {
         height: 400px;
     }
 
-    /* Servizi */
+    /* ------ Servizi ------ */
+
     .servizi {
         padding: 64px 0;
     }
@@ -1025,7 +942,7 @@ text-transform: uppercase;
         letter-spacing: -0.2px;
     }
 
-    /* Clienti */
+    /* ----- Clienti ----- */
     .clienti {
         padding: 64px 0;
     }
@@ -1034,7 +951,43 @@ text-transform: uppercase;
         font-size: 20px;
     }
 
-    /* Footer */
+    /* ----- Pg Contatti Intro ----- */
+    .pg-contatti-intro__row {
+        flex-direction: column;
+        padding: 40px 24px;
+        gap: 24px;
+    }
+
+    .pg-contatti-intro__number {
+        width: auto;
+    }
+
+    .pg-contatti-intro__number span {
+        font-size: 100px;
+    }
+
+    .pg-contatti-intro__text {
+        padding-top: 0;
+    }
+
+    .pg-contatti-intro__title {
+        font-size: 24px;
+    }
+
+    .pg-contatti-intro__heading {
+        font-size: 24px;
+    }
+
+    .pg-contatti-hero h2 {
+        font-size: 36px;
+    }
+
+    /* ----- Contatti (index) ----- */
+    .contatti h2 {
+        font-size: 36px;
+    }
+
+    /* ----- Footer ------ */
     .footer__inner {
         padding-left: 24px;
         padding-right: 24px;
@@ -1062,6 +1015,4 @@ text-transform: uppercase;
     }
 }
 
-/* ============================================
-   RESPONSIVE - SMALL MOBILE (< 480px)
-   ============================================ */
+/* ----- RESPONSIVE - SMALL MOBILE (< 480px) ----- */
