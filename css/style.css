@@ -61,14 +61,11 @@ body {
 
 :root {
     --color-primary:       #FFF550;
-    --color-primary-hover: #f0e640;
     --color-dark:          #1a1a2e;
     --color-black:         #000;
     --color-white:         #FFF;
     --color-bg-footer:     #222333;
-    --color-bg-warm:       #F5F0E8;
     --color-overlay:       rgba(0, 0, 0, 0.40);
-    --color-border-light:  rgba(0, 0, 0, 0.15);
     --color-white-70:      rgba(255, 255, 255, 0.7);
     --color-white-50:      rgba(255, 255, 255, 0.5);
 }
@@ -442,7 +439,7 @@ body {
 /* ----- SEZIONE 3 - CLIENTI ----- */
 
 .clienti {
-    background-color: var(--color-bg-warm);
+    background-color: var(--color-white);
     padding: 80px 0;
 }
 
@@ -713,30 +710,33 @@ text-transform: uppercase;
     color: var(--color-white);
 }
 
-/* ----- RESPONSIVE - TABLET (800px - 1439px) ----- */
+/* ----- RESPONSIVE - TABLET (768px - 1023px) ----- */
 
-@media only screen and (max-width: 1439px) {
-    .content {
-        padding: 0 48px;
-    }
+@media only screen and (max-width: 1023px) {
 
-    /* Header */
+    /* ----- Header ----- */
     .header {
-        padding: 0 28px;
+        top: 20px;
+        padding: 0 34px;
     }
 
     .header__nav {
-        padding: 16px 48px;
+        padding: 16px 34px;
     }
 
-    /* Hero */
+    /* ----- Content ----- */
+    .content {
+        padding: 0 77px;
+    }
+
+    /* ----- Hero ----- */
     .hero {
         min-height: 600px;
     }
 
     .hero__content {
-        padding: 25px 48px 70px;
-        gap: 50px;
+        padding: 25px 77px 70px;
+        gap: 55px;
     }
 
     .hero__title {
@@ -752,13 +752,19 @@ text-transform: uppercase;
         font-size: 16px;
     }
 
-    /* Editoriale */
+    /* ----- Editoriale ----- */
+    .editoriale {
+        padding: 57px 0;
+    }
+
     .editoriale__title {
         font-size: 56px;
+        margin-bottom: 28px;
     }
 
     .editoriale__columns {
-        gap: 64px;
+        gap: 125px;
+        margin-bottom: 34px;
     }
 
     .editoriale__col {
@@ -766,7 +772,19 @@ text-transform: uppercase;
         flex: 1;
     }
 
-    /* Servizi */
+    /* ----- Servizi ----- */
+    .servizi {
+        padding: 57px 0;
+    }
+
+    .servizi .content {
+        gap: 34px;
+    }
+
+    .servizi__header {
+        gap: 23px;
+    }
+
     .servizi__title {
         font-size: 64px;
         letter-spacing: -2.46px;
@@ -777,40 +795,82 @@ text-transform: uppercase;
     }
 
     .servizi__cards {
-        gap: 12px;
+        gap: 11px;
     }
 
-    /* Pg Contatti Intro */
+    /* ----- Clienti ----- */
+    .clienti {
+        padding: 57px 0;
+    }
+
+    .clienti .content {
+        gap: 28px;
+    }
+
+    .icon_clienti {
+        gap: 24px;
+    }
+
+    .icon_clienti img {
+        max-width: 120px;
+        height: auto;
+    }
+
+    /* ----- Pg Contatti Intro ----- */
     .pg-contatti-intro__row {
-        padding: 64px 48px;
-        gap: 80px;
+        margin: 0 18px;
+        padding: 45px 98px;
+        gap: 150px;
+    }
+
+    .pg-contatti-intro__number {
+        width: 178px;
     }
 
     .pg-contatti-intro__number span {
         font-size: 180px;
     }
 
-    /* Footer */
+    .pg-contatti-intro__text {
+        padding-top: 28px;
+    }
+
+    .pg-contatti-intro__title {
+        margin-bottom: 17px;
+    }
+
+    /* ----- Footer ----- */
     .footer__inner {
-        padding-left: 48px;
-        padding-right: 48px;
+        padding-left: 77px;
+        padding-right: 77px;
+        padding-bottom: 114px;
+    }
+
+    .footer__top {
+        padding: 45px 0;
+    }
+
+    .footer__nav {
+        gap: 33px;
+    }
+
+    .footer__bottom {
+        gap: 38px;
+        padding-top: 17px;
     }
 }
 
-/* ------ RESPONSIVE - MOBILE (< 800px) ------ */
-@media only screen and (max-width: 799px) {
-    .content {
-        padding: 0 24px;
-    }
+/* ------ RESPONSIVE - MOBILE (< 768px) ------ */
+@media only screen and (max-width: 767px) {
 
-    /* Header */
+    /* ----- Header ----- */
     .header {
-        top: 18px;
-        padding: 0 16px;
+        top: 15px;
+        padding: 0 25px;
     }
 
     .header__nav {
-        padding: 17px 24px;
+        padding: 16px 26px;
     }
 
     .header__menu {
@@ -849,6 +909,11 @@ text-transform: uppercase;
         height: 24px;
     }
 
+    /* ----- Content ----- */
+    .content {
+        padding: 0 38px;
+    }
+
     /* ----- Hero ----- */
     .hero {
         min-height: 100vh;
@@ -856,8 +921,8 @@ text-transform: uppercase;
     }
 
     .hero__content {
-        padding: 25px 24px 70px;
-        gap: 40px;
+        padding: 25px 38px 70px;
+        gap: 42px;
     }
 
     .hero__title {
@@ -879,7 +944,6 @@ text-transform: uppercase;
     }
 
     /* ----- Editoriale ----- */
-
     .editoriale {
         padding: 60px 0;
     }
@@ -902,13 +966,11 @@ text-transform: uppercase;
     }
 
     /* ----- Media section ----- */
-
     .ape-section__img {
         height: 400px;
     }
 
-    /* ------ Servizi ------ */
-
+    /* ----- Servizi ----- */
     .servizi {
         padding: 64px 0;
     }
@@ -949,6 +1011,22 @@ text-transform: uppercase;
         font-size: 20px;
     }
 
+    .icon_clienti {
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .icon_clienti img {
+        width: calc(50% - 20px);
+        height: auto;
+    }
+
+    /* ----- Contatti (index) ----- */
+    .contatti h2 {
+        font-size: 36px;
+    }
+
     /* ----- Pg Contatti Intro ----- */
     .pg-contatti-intro__row {
         flex-direction: column;
@@ -980,12 +1058,7 @@ text-transform: uppercase;
         font-size: 36px;
     }
 
-    /* ----- Contatti (index) ----- */
-    .contatti h2 {
-        font-size: 36px;
-    }
-
-    /* ----- Footer ------ */
+    /* ----- Footer ----- */
     .footer__inner {
         padding-left: 24px;
         padding-right: 24px;
@@ -1013,4 +1086,3 @@ text-transform: uppercase;
     }
 }
 
-/* ----- RESPONSIVE - SMALL MOBILE (< 480px) ----- */
